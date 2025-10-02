@@ -167,8 +167,8 @@ section {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     margin-top: 60px;
 }
 
@@ -233,20 +233,10 @@ section {
 }
 
 .member-email {
-    display: inline-block;
     color: var(--secondary-color);
-    text-decoration: none;
     font-size: 0.95rem;
-    padding: 8px 20px;
-    border: 2px solid var(--secondary-color);
-    border-radius: 25px;
-    transition: all 0.3s ease;
-}
-
-.member-email:hover {
-    background: var(--secondary-color);
-    color: white;
-    transform: translateY(-2px);
+    margin-top: 5px;
+    font-weight: 500;
 }
 
 /* Mission Section */
@@ -330,8 +320,8 @@ footer {
     }
     
     .team-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     
     .mission-grid {
@@ -343,6 +333,11 @@ footer {
     .nav-links {
         flex-direction: column;
         gap: 15px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .member-card {
