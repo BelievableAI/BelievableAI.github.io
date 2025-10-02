@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Believable AI - Building Trustworthy Artificial Intelligence</title>
+    <meta name="description" content="Believable AI research group focuses on developing trustworthy, transparent, and ethical AI systems that people can rely on.">
+    <meta name="keywords" content="AI, artificial intelligence, trustworthy AI, machine learning, research">
+    <link rel="stylesheet" href="base.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤙</text></svg>">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🤙</div>
+                <h1>Believable AI</h1>
+                <p class="tagline">We aim to build AI that people can believe.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mission Section -->
+    <section id="mission" class="mission-section">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-subtitle">
+                At Believable AI, we focus on creating artificial intelligence systems that are trustworthy, 
+                transparent, and aligned with human values.
+            </p>
+            
+            <div class="mission-grid">
+                <div class="mission-item fade-in-up">
+                    <span class="mission-icon">🛡️</span>
+                    <h3>Trustworthy</h3>
+                    <p>Building AI systems that are reliable and consistent in their behavior, ensuring users can depend on their outputs.</p>
+                </div>
+                
+                <div class="mission-item fade-in-up">
+                    <span class="mission-icon">🔍</span>
+                    <h3>Transparent</h3>
+                    <p>Developing explainable and interpretable AI that allows users to understand how decisions are made.</p>
+                </div>
+                
+                <div class="mission-item fade-in-up">
+                    <span class="mission-icon">⚖️</span>
+                    <h3>Ethical</h3>
+                    <p>Creating AI systems that are aligned with human values and contribute positively to society.</p>
+                </div>
+                
+                <div class="mission-item fade-in-up">
+                    <span class="mission-icon">🔒</span>
+                    <h3>Robust</h3>
+                    <p>Ensuring AI systems are resilient to adversarial attacks and perform well in edge cases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="section-subtitle">
+                Our diverse team brings together expertise from academia, industry, and government 
+                to advance the field of trustworthy AI.
+            </p>
+            
+            <div class="team-grid">
+                <div class="member-card fade-in-up">
+                    <img src="pictures/hoki.jpg" alt="Hoki Kim" class="member-photo">
+                    <h3 class="member-name">Hoki Kim</h3>
+                    <p class="member-affiliation">Chung-Ang University</p>
+                    <a href="mailto:hokikim@cau.ac.kr" class="member-email">Contact</a>
+                </div>
+                
+                <div class="member-card fade-in-up">
+                    <img src="pictures/keonwoo.jpg" alt="Keonwoo Kim" class="member-photo">
+                    <h3 class="member-name">Keonwoo Kim</h3>
+                    <p class="member-affiliation">NAVER Cloud</p>
+                    <a href="mailto:keonwoo.kim97@navercorp.com" class="member-email">Contact</a>
+                </div>
+                
+                <div class="member-card fade-in-up">
+                    <img src="pictures/sungwon.jpg" alt="Sungwon Chae" class="member-photo">
+                    <h3 class="member-name">Sungwon Chae</h3>
+                    <p class="member-affiliation">Seoul National University</p>
+                    <a href="mailto:csw0815@snu.ac.kr" class="member-email">Contact</a>
+                </div>
+                
+                <div class="member-card fade-in-up">
+                    <img src="pictures/sangwon.jpg" alt="Sangwon Yoon" class="member-photo">
+                    <h3 class="member-name">Sangwon Yoon</h3>
+                    <p class="member-affiliation">Ministry of Justice, Republic of Korea</p>
+                    <a href="mailto:asd01075272750@gmail.com" class="member-email">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Believable AI. Building trustworthy artificial intelligence.</p>
+                <p style="margin-top: 10px; opacity: 0.7;">
+                    For inquiries and collaborations, please reach out to any of our team members.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and animations -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Add stagger effect to team cards
+        document.querySelectorAll('.member-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
